@@ -4,4 +4,5 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello, World from FastAPI on Railway!"}
+    message = fetch_instagram_insights()  # Call the function from untitled49.py
+    return {"message": message}
